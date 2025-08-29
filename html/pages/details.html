@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Tag Details e Summary</h1>
+
+    <details open>
+        <summary>Motor 1.6</summary>
+        <p>O carro possui um motor super forte e rápido...</p>
+    </details>
+    <details>
+        <summary>Confortos</summary>
+        <p>Carro de luxo com sensor de ré, câmeras e som de qualidade...</p>
+    </details>
+    <details>
+        <summary>Preços</summary>
+        <p>12x de R$999,90</p>
+    </details>
+
+    open <!-- abre a página já com o details aberto -->
+
+    <h1>Aplicando datalist</h1>
+
+    <form>
+        <input list="carros" name="carro" placeholder="Procurando algum carro">
+        <datalist id="carros">
+            <option value="Gol 1.6"></option>
+            <option value="Golf 1.4"></option>
+            <option value="BMW 1.0"></option>
+            <option value="Onix 1.0"></option>
+        </datalist>
+    </form>
+
+    <hr><a href="../index.html">Página Home</a>
+</body>
+</html>

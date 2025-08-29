@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+
+    .form{
+      padding: 20px;
+    }
+
+    .form input[type="submit"]{
+      padding: 5px 20px;
+    }
+
+    #resultado{
+      padding-left: 20px;
+    }
+
+  </style>
+
+  <title>JavaScript - Aula 05</title>
+</head>
+<body>
+  <header class="title">
+    <h1>JavaScript</h1>
+  </header>
+
+  <form onsubmit="return calcular(event)" class="form">
+    <label for="">Digite seu peso:</label> <br>
+    <input type="text" nome="peso" id="peso" placeholder="Exemplo 65"> <br><br>
+
+    <label for="">Digite sua altura:</label> <br>
+    <input type="text" nome="altura" id="altura" placeholder="Exemplo 1.90"> <br><br>
+
+    <input type="submit" value="Calcular IMC">
+  </form>
+
+  <div id="resultado"></div>
+
+  <br><hr>
+
+  <footer class="header-home">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    var peso;
+    var altura;
+    var imc;
+    var resultado;
+
+    function calcular(event){
+      event.preventDefault();
+
+      peso = document.getElementById('peso').value;
+      altura = document.getElementById('altura').value;
+
+      imc = peso / (altura * altura);
+
+      resultado = document.getElementById('resultado');
+
+      if(imc < 17){
+          resultado.innerHTML = "Seu resultado foi: " + imc.toFixed(2) + "<br> Cuidado você está muito abaixo do peso."
+      }else if(imc > 17 && imc <= 18.49){
+          resultado.innerHTML = "Seu resultado foi: " + imc.toFixed(2) + "<br> Você está abaixo do peso."
+      }else if(imc >= 18.5 && imc < 24.99){
+          resultado.innerHTML = "Seu resultado foi: " + imc.toFixed(2) + "<br> Você está no peso ideal."
+      }else if(imc > 25 && imc <= 29.99){
+          resultado.innerHTML = "Seu resultado foi: " + imc.toFixed(2) + "<br> Você está acima do peso."
+      }else if(imc >= 30){
+          resultado.innerHTML = "Seu resultado foi: " + imc.toFixed(2) + "<br> Cuidado! Obesidade."
+      }
+
+      document.getElementById('peso').value = '';
+      document.getElementById('altura').value = '';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 01</title>
+
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container{
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>Praticando JavaScript - Variáveis</h1> <hr> <br>
+
+  <div class="container" id="cidade">
+    <input type="text" id="minhaIdade" placeholder="Digite sua idade">
+    <input type="text" id="minhaCidade" placeholder="Digite sua cidade">
+    <button onclick="pegarValor1()">Enviar</button>
+    <div id="resultadoCidade"></div>
+  </div>
+
+  <div class="container" id="operacoes">
+    <input type="text" id="n1" placeholder="Digite um número">
+    <input type="text" id="n2" placeholder="Digite outro número">
+    <button onclick="pegarValor2()">Enviar</button>
+    <ul>
+      <li id="soma"></li>
+      <li id="subtracao"></li>
+      <li id="multiplicacao"></li>
+      <li id="divisao"></li>
+      <li id="resto"></li>
+    </ul>
+  </div>
+
+  <div class="container" id="nascimento">
+    <input type="text" id="anoNascimento" placeholder="Seu nascimento">
+    <button onclick="pegarValor3()">Enviar</button>
+    <div id="resultadoNascimento"></div>
+  </div>
+
+  <div class="container" id="nome">
+    <input type="text" id="primeiroNome" placeholder="Digite seu nome">
+    <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
+    <button onclick="pegarValor4()">Enviar</button>
+    <div id="resultadoNome"></div>
+  </div>
+
+  <div class="container" id="produto">
+    <input type="text" id="valorProduto" placeholder="Digite o nome do produto">
+    <input type="text" id="valorValor" placeholder="Digite o valor do produto">
+    <button onclick="pegarValor5()">Enviar</button>
+    <div id="resultadoProduto"></div>
+  </div>
+
+  <div class="container" id="celcius">
+    <input type="text" name="temperaturaCelsius" id="temperaturaCelsius" placeholder="Digite a temperatura em ºC">
+    <button onclick="pegarValor6()">Enviar</button>
+    <div id="resultadoFahrenheit"></div>
+  </div>
+
+  <script src="script01.js"></script>
+</body>
+</html>

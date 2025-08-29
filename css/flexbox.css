@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.container{
+    background-color: #121212;
+    height: 500px;
+    margin: 50px;
+
+    display: flex;
+    flex-direction: row;
+
+    /* flex-diretion no padrão (row) */
+    /* align-items -> vai mexer verticalmente -> coluna */
+    /* jusrtify-content -> vai mexer horizontalmente -> linha */
+    
+    align-items: center;
+    justify-content: center;
+
+    /* usando flex-direction: column -> irá inverter */
+}
+
+.area{
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+}
+
+.item-1{
+    background-color: red;
+}
+
+.item-2{
+    background-color: blue;
+    align-self: flex-start;
+}
+
+.item-3{
+    background-color: green;
+}
+
+.item-4{
+    background-color: brown;
+    align-self: flex-end;
+}

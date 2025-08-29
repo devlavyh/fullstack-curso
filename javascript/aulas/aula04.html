@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+
+    .main {
+      padding: 20px;
+    }
+
+    .main button{
+      padding: 5px 20px;
+    }
+
+  </style>
+
+  <title>JavaScript - Aula 04</title>
+</head>
+<body>
+  <header class="title">
+    <h1>JavaScript</h1>
+  </header>
+
+  <div class="main">
+
+    <button onclick="user()">Idade</button>
+
+    <button onclick="numero()">Número</button>
+
+    <button onclick="media()">Média</button>
+
+  </div>
+
+  <hr>
+
+  <footer class="header-home">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+    </ul>
+  </footer>
+
+  <script>
+  /* CONDICIONAIS */
+    function user(){
+      var idade = prompt("Qual a sua idade?")
+
+      if(idade >= 18){
+        alert("Seja bem-vindo ao site!")
+      }else{
+        alert("Você precisa ser maior de idade para acessar esse conteúdo.")
+      }
+    }
+
+    function numero(){
+      var numero = prompt("Digite o número 10")
+
+      Number(numero) === 10 ? alert("Você digitiu o número 10 mesmo!") : alert("Você não digitou o número 10, tente novamente.")
+    }
+
+    function media(){
+      var valor1 = prompt("Nota 1:")
+      var valor2 = prompt("Nota 2:")
+
+      var media = (Number(valor1) + Number(valor2)) / 2
+      
+      if(media >= 7){
+        alert("Aprovado!")
+      }else{
+        alert("Reprovado! Estude mais")
+      }
+    }
+  </script>
+</body>
+</html>

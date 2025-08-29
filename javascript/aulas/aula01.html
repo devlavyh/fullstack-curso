@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../style.css">
+
+  <title>JavaScript - Aula 01</title>
+</head>
+<body>
+  <header class="title">
+    <h1>JavaScript</h1>
+  </header>
+
+  <h2 id="area">Bem vindo!</h2>
+
+  <button onclick="entrar()">Acessar</button>
+
+  <footer class="header-home">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    var area = document.getElementById('area')
+
+    function entrar(){
+      var nome = prompt("Digite seu nome:")
+
+      if(nome === '' || nome === null){
+        alert("Ops algo deu errado...")
+        area.innerHTML = "Clique no botão para acessar..."
+      }else{
+        area.innerHTML = "Bem vindo " + nome + "! "
+
+        let botaoSair = document.createElement("button")
+        botaoSair.innerText = "Sair da conta"
+        botaoSair.onclick = sair
+
+        area.appendChild(botaoSair)
+      }
+    }
+
+    function sair(){
+      alert("Até mais!")
+      area.innerHTML = "Você saiu!"
+    }
+    /* calcular média */
+    function mediaAluno(nota1, nota2){
+      var media = (nota1 + nota2) / 2;
+
+      if(media >= 7){
+        console.log("Aluno aprovado com a média: "  + media)
+      }else if(media < 7){
+        console.log("Aluno reprovado com a média: " + media)
+      }
+    }
+    /* calcular média */
+
+    function aluno(nome, curso){
+      var mensagem = "Seja bem vindo " + nome + " ao curso de " + curso;
+
+      console.log(mensagem);
+    }
+  </script>
+</body>
+</html>

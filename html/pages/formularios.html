@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    
+    <h1>Formulários</h1>
+
+    <form action="dados.js" autocomplete="off" method="get">
+
+        <label for="nome">Primeiro Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome" required>
+
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id="idade" placeholder="Idade" required>
+
+        <input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
+
+    </form>
+
+    -----//-----
+
+    <form> <!-- cria um formulário -->
+    action="dados.js" <!-- linguagem de programação que será enviado os dados digitado pelo usuário -->
+    autocomplete="off" <!-- desligar as sugestões nos "inputs" -->
+    method="get" <!-- não aparecerá os dados na URL -->
+    method="post" <!-- para envio de dados sensíveis como senhas, endereços, etc -->
+
+    <label> <!-- cria um "título" para o dado a ser inserido -->
+    <input> <!-- cria um campo para digitar o dado solicitado -->
+    placeholder="Nome" <!-- serve como "dica" -->
+    placeholder="Idade"
+
+    required <!-- faz com que será obrigatório o preenchimento do campo -->
+
+    <hr>
+
+    <!-- Tipo RADIO -->
+    <label>
+        <strong>Qual seu nível de programador atualmente?</strong>
+    </label> <br>
+
+    <label>
+        <input type="radio" name="nivel" id="nivel" value="iniciante">Iniciante
+    </label>
+    <label>
+        <input type="radio" name="nivel" id="nivel" value="avancado"> Intermediário
+    </label>
+    <label>
+        <input type="radio" name="nivel" id="nivel" value="avancado">Avançado
+    </label> <br><br>
+
+    <!-- Tipo SELECT -->
+    <label for="escolaridade">
+        <strong>Qual a sua escolaridade?</strong>
+    </label>
+    <select id="escolaridade" required>
+        <option selected disabled value="">Selecione</option>
+        <option>Ensino Fundamental</option>
+        <option>Ensino Médio</option>
+        <option>Ensino Superior</option>
+    </select> <br> <br>
+
+
+
+    <!-- Tipo CHECKBOX -->
+    <label>
+        <strong>Selecione as tecnologias que você conhece:</strong>
+    </label> <br>
+
+    <input type="checkbox" id="tecnologia1" name="tecnologia1" value="HTML">
+    <label for="tecnologia1"> HTML</label>
+
+    <input type="checkbox" name="tecnologia2" id="tecnologia2" value="CSS">
+    <label for="tecnologia2"> CSS</label>
+
+    <input type="checkbox" name="tecnologia3" id="tecnologia3" value="JavaScript">
+    <label for="tecnologia3"> JavaScript</label>
+
+    <br><br><input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
+
+    <hr>
+
+    <!-- EMAIL e DATAS -->
+    <form>
+        <label for="email">Seu email</label>
+        <input type="email" name="email" id="email"> <br><br>
+
+        <label for="data">Nascimento</label>
+        <input type="date" name="data" id="data">
+    </form>
+
+    <br><br><input type="submit" value="Cadastrar" name="cadastrar" id="cadastrar">
+
+    <hr><a href="../index.html">Página Home</a>
+
+</body>
+</html>

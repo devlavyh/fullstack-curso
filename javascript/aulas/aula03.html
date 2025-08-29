@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .main{
+      padding-left: 40px;
+    }
+
+    .main button{
+      margin-top: 12px;
+      padding: 5px 20px;
+    }
+  </style>
+
+  <title>JavaScript - Aula 03</title>
+</head>
+<body>
+  <header class="title">
+    <h1>JavaScript</h1>
+  </header>
+  <br>
+
+  <div class="main">
+    <h1>Escolha um item</h1>
+    <ul>
+      <li>1 - Suco</li>
+      <li>2 - Água gelada</li>
+      <li>3 - Sorvete</li>
+      <li>4 - Chamar o garçom</li>
+    </ul>
+
+    <button onclick="pedir()">Pedir</button>
+  </div>
+
+  <br><hr><br>
+
+  <div class="main">
+
+    <h2>Escolha uma linguagem de programação</h2>
+    <ul>
+      <li>Python</li>
+      <li>C++</li>
+      <li>Java</li>
+      <li>C</li>
+      <li>C#</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <button onclick="escolher()">Escolher</button>
+
+  </div>
+
+  <br><hr>
+
+  <footer class="header-home">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+    </ul>
+  </footer>
+
+  <script>
+
+    /* Pedir Item */
+    function pedir(){
+      var valor = prompt("Digite um valor de 1 a 4");
+
+      switch(Number(valor)){
+        case 1:
+          alert("Você escolheu 1 = Suco");
+          break;
+        case 2:
+          alert("Você escolheu 2 = Água gelada");
+          break;
+        case 3:
+          alert("Você escolheu 3 = Sorvete");
+          break;
+        case 4:
+          alert("Você chamou o garçom!");
+          break;
+        default:
+          alert("Escolha uma opção entre 1 a 4");
+          break
+      }
+    }
+
+    /* Escolher Linguagem */
+    function escolher(){
+      var linguagem = prompt("Digite a linguagem escolhida:");
+
+      switch(linguagem){
+        case 'Python':
+          alert("Você escolheu a linguagem Python!")
+          break
+        case 'C++':
+          alert("Você escolheu a linguagem C++!")
+          break
+        case 'Java':
+          alert("Você escolheu a linguagem Java!")
+          break
+        case 'C':
+          alert("Você escolheu a linguagem C!")
+          break
+        case 'C#':
+          alert("Você escolheu a linguagem C#!")
+          break
+        case 'JavaScript':
+          alert("Você escolheu a linguagem JavaScript!")
+          break
+        default:
+          alert("Por favor escolha uma linguagem de programação")
+          break
+      }
+    }
+
+    let senha
+    while (senha != '1234'){
+      senha = prompt("Digite sua senha:");
+    }
+  </script>
+</body>
+</html>

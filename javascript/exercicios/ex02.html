@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 02</title>
+
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container{
+      padding-bottom: 20px;
+    }
+
+    #resultadoQualquer, #resultadoMaior, #resultadoIdade, #resultadoAno, #resultadoOperacao, #resultadoPromocao{
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Praticando JavaScript - Condições</h1> <hr> <br>
+  
+  <div class="container" id="positivo-negativo">
+    <input type="number" id="numeroQualquer" placeholder="Digite um número:">
+    <button onclick="pegarValor1()">Enviar</button>
+    <div id="resultadoQualquer"></div>
+  </div>
+
+  <div class="container" id="maior-menor">
+    <span>Digite 3 números:</span>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <input type="number" id="number3">
+    <button onclick="pegarValor2()">Enviar</button>
+
+    <div id="resultadoMaior"></div>
+  </div>
+
+  <div class="container" id="categoria-idade">
+    <input type="number" id="valorIdade" placeholder="Digite a sua idade">
+    <button onclick="pegarValor3()">Enviar</button>
+
+    <div id="resultadoIdade"></div>
+  </div>
+
+  <div class="container" id="mes-do-ano">
+    <h2>Escolha um mês do ano:</h2>
+
+    <input type="number" id="mesAno" placeholder="Digite um número">
+    <button onclick="pegarValor4()">Enviar</button>
+
+    <ul>
+      <li>1 - Janeiro</li>
+      <li>2 - Fevereiro</li>
+      <li>3 - Março</li>
+      <li>4 - Abril</li>
+      <li>5 - Maio</li>
+      <li>6 - Junho</li>
+      <li>7 - Julho</li>
+      <li>8 - Agosto</li>
+      <li>9 - Setembro</li>
+      <li>10 - Outubro</li>
+      <li>11 - Novembro</li>
+      <li>12 - Dezembro</li>
+    </ul>
+
+    <div id="resultadoAno"></div>
+  </div>
+
+  <div class="container" id="calculadora">
+    <input type="number" id="numberA" placeholder="Digite um número">
+    <input type="number" id="numberB" placeholder="Digite outro número">
+
+    <input type="number" id="operacao" placeholder="Escolha uma operação">
+
+    <button onclick="pegarValor5()">Enviar</button>
+
+    <ul>
+      <li>1 - adição</li>
+      <li>2 - subtração</li>
+      <li>3 - multiplicação</li>
+      <li>4 - divisão</li>
+    </ul>
+
+    <div id="resultadoOperacao"></div>
+  </div>
+
+  <div class="container" id="promocao">
+    <h2>Acesso à Promoção</h2>
+
+    <input type="number" id="valorIdade2" placeholder="Digite sua idade">
+
+    <select id="vip">
+      <option value="true">Sou cliente VIP</option>
+      <option value="false">Não sou cliente VIP</option>
+    </select>
+
+    <button onclick="pegarValor6()">Verificar</button>
+
+    <div id="resultadoPromocao"></div>
+  </div>
+
+  <script src="script02.js"></script>
+</body>
+</html>
