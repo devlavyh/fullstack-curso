@@ -22,23 +22,75 @@
   </footer>
 
   <script>
-    // REST Operator
+  // REST OPERATOR
+  function convidados(...nomes){
+    console.log("SEJA BEM VINDO TODOS CONVIDADOS");
+    console.log(nomes);
+  }
 
-/*     function convidados(...nomes){
-      console.log("SEJA BEM VINDO TODOS CONVIDADOS");
-      console.log(nomes);
+  convidados("Matheus", "Lucas", "Maria", "Ana Caroline");
+
+// ========================================= //
+
+  // SORTEADOR
+  function sorteador(...numeros){
+    console.log(numeros);
+
+    const numeroGerado = Math.floor(Math.random() * numeros.length);
+    console.log("O número gerado foi: " + numeros[numeroGerado]);
+  }
+
+  sorteador(1, 4, 6, 15, 34, 55, 67, 89, 91);
+
+// ========================================= //
+
+  // MAP
+  let lista = ["Matheus", "José", "Maria"];
+
+  lista.map((item, index) => {
+    console.log(`PASSANDO: ${item} - Está na posição ${index}`)
+  })
+
+// ========================================= //
+
+    // REDUCE
+  let numeros = [5, 3, 2];
+
+  let total = numeros.reduce((acumulador, numero, indice, original) =>{
+    console.log(`${acumulador} - total até o momento`);
+    console.log(`${numero} - valor atual`);
+    console.log(`${indice} - indice atual`);
+    console.log(`${original} - array original`);
+    console.log("==========================");
+
+    return acumulador += numero;
+  })
+
+  console.log("TOTAL DO REDUCE: " + total); 
+
+// ========================================= //
+
+    // FIND
+  let listagem = [5, 3, "Jose", 2, "Matheus", "Jose"];
+
+  let busca = listagem.find((item) =>{
+    if(item === "Jose"){
+      return console.log("ITEM ENCONTRADO COM SUCESSO")
     }
+  })
 
-    convidados("Matheus", "Lucas", "Maria", "Ana Caroline"); */
+  console.log(busca);
 
-    function sorteador(...numeros){
-      console.log(numeros);
+// ========================================= //
 
-      const numeroGerado = Math.floor(Math.random() * numeros.length);
-      console.log("O número gerado foi: " + numeros[numeroGerado]);
-    }
+    // FILTER
+  let palavras = ["Matheus", "Ana", "Jose", "Ricardo Silva", "Sujeito Programador"];
 
-    sorteador(1, 4, 6, 15, 34, 67, 89, 91);
+  let resultado = palavras.filter((item) =>{
+    return item.length >= 5;
+  })
+
+  console.log(resultado);
   </script>
 </body>
 </html>
