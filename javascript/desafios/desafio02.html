@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 02</title>
+</head>
+<body>
+  
+  <script>
+    // VERIFICADOR DE NÚMERO
+    function verificador(numero){
+      if (numero > 0){
+        return `O número ${numero} é positivo!`
+      }else if (numero === 0){
+        return `O número é igual a ZERO!`
+      }else {
+        return `O número ${numero} é negativo!`
+      }
+    }
+
+    console.log(verificador(7));
+    console.log(verificador(-7));
+    console.log(verificador(0));
+
+    // VERIFICAR ELEMENTO EM UM ARRAY
+    function verificarElemento(array, value){
+      return array.includes(value);
+    }
+
+    const lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    console.log(verificarElemento(lista, 6));
+    console.log(verificarElemento(lista, 11));
+
+    // PERCORRER PELO PREÇO
+    const produtos = [
+      { name: 'Maça', price: 2.5 },
+      { name: 'Coca cola', price: 8},
+      { name: 'Guarana', price: 5},
+      { name: 'Chocolate', price: 20}
+    ];
+
+    const encontrarProduto = produtos.find((produtos) => produtos.price === 20);
+
+    console.log(encontrarProduto);
+
+    // FILTRAR
+    const filtro = produtos.filter((produtos) => produtos.price <= 8);
+
+    console.log(filtro);
+  </script>
+</body>
+</html>
